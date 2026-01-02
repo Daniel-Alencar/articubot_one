@@ -11,7 +11,6 @@ def generate_launch_description():
 
     package_name='articubot_one'
 
-    # --- CORREÇÃO 1: Adicionado sim_mode: true ---
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
@@ -70,7 +69,6 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
 
-    # --- CORREÇÃO 3: Delay para garantir que o controlador só inicie após o robô nascer ---
     delayed_diff_drive_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=spawn_entity,
