@@ -107,8 +107,8 @@ def generate_launch_description():
         world_arg,
         gazebo,
         spawn_entity,
-        delayed_diff_drive_spawner, # Usando a versão com delay
-        delayed_joint_broad_spawner, # Usando a versão com delay
+        delayed_diff_drive_spawner,
+        delayed_joint_broad_spawner,
         ros_gz_bridge,
         ros_gz_image_bridge
     ])
